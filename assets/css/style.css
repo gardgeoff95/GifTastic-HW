@@ -43,6 +43,7 @@ h5{
 #gifs{
     margin-top: 20px;
     width: 100%;
-    height: 600px;
-    border: 2px solid #a2b9bc;
+    
+    border-top: 2px solid #a2b9bc;
+    border-left: 2px solid #a2b9bc;
 }
