@@ -17,13 +17,15 @@ $(document).ready(function () {
     }
     renderButtons();
 
+    
+
 
     $("body").on("click", ".showButton", function () {
 
-
+        
         var show = $(this).attr('show-name');
         console.log(show);
-        queryURL = "https://api.giphy.com/v1/gifs/search?api_key=3h1jGoQFBeboB5WoAwTcNZIjaeGb7tmv&q=" + show + "&limit=10&offset=0&rating=G&lang=en"
+        queryURL = "https://api.giphy.com/v1/gifs/search?api_key=3h1jGoQFBeboB5WoAwTcNZIjaeGb7tmv&q=" + show + "&limit=10&offset=0&rating=PG-13&lang=en"
 
         $.ajax({
             url: queryURL,
@@ -41,11 +43,17 @@ $(document).ready(function () {
             for (i = 0; i < results.length; i++) {
                 var animated = results[i].images.fixed_height.url;
                 var still = results[i].images.fixed_height_still.url;
+                
+                var rating = results[i].rating;
+                var ratingDiv = $("<div>");
+                $(ratingDiv).text("Rating: " + rating.toUpperCase()).attr("id", "ratings");
 
                 var img = $("<img>").attr("src", still).attr("state", "still").attr("animated", animated).attr("stillImg", still);
+               
+
 
                 $("#gifs").prepend(img);
-
+                $("#gifs").prepend(ratingDiv);
 
 
             }

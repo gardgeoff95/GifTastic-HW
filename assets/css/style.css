@@ -47,3 +47,9 @@ h5{
     border-top: 2px solid #a2b9bc;
     border-left: 2px solid #a2b9bc;
 }
+#ratings{
+    font-size: 25px;
+    font-family: serif;
+    background-color: #a2b9bc;
+    width: 30%;
+}
