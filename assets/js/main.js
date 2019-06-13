@@ -36,7 +36,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            //empties Gif div so there's no overlapping gifs
+            //empties gif div so there's no overlapping gifs
             $("#gifs").empty();
 
             //variable for easy access reponse referencing
@@ -63,8 +63,6 @@ $(document).ready(function () {
 
 
             }
-
-
 
         })
 
